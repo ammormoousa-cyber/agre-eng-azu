@@ -1,0 +1,555 @@
+<!-- ===============================
+  UI كلية الهندسة الزراعية — ملف HTML
+  - لغة: عربية (RTL)
+  - فصل كامل: HTML / CSS / JS
+  - يدعم: دارك/لايت + متجاوب + أنيميشن
+  - خطوط عربية جميلة: Tajawal + Cairo
+  - ملاحظات: ضع هذا الملف باسم index.html وبجانبه styles.css و script.js
+================================== -->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>كلية الهندسة الزراعية</title>
+  <meta name="description" content="واجهة مستخدم لكلية الهندسة الزراعية — متجاوبة مع أنيميشن وخط عربي جميل، ودعم الوضع الليلي والنهاري." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- أشكال خلفية متحركة خفيفة -->
+  <div class="bg-shape bg-1" aria-hidden="true"></div>
+  <div class="bg-shape bg-2" aria-hidden="true"></div>
+
+  <!-- شريط علوي -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="brand" aria-label="الصفحة الرئيسية">
+        <span class="brand-icon" aria-hidden>🌿</span>
+        <span class="brand-text">
+          <span class="muted">كلية</span>
+          <span class="strong">الهندسة الزراعية</span>
+        </span>
+      </a>
+
+      <nav class="nav" id="mainNav" aria-label="التنقل الرئيسي">
+        <a href="#about" class="nav-link">عن الكلية</a>
+        <a href="#programs" class="nav-link">البرامج</a>
+        <a href="#departments" class="nav-link">الأقسام</a>
+        <a href="#faculty" class="nav-link">هيئة التدريس</a>
+        <a href="#admissions" class="nav-link">التقديم والقبول</a>
+        <a href="#news" class="nav-link">الأخبار</a>
+        <a href="#contact" class="nav-link">تواصل</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="themeToggle" aria-label="تبديل الوضع بين الليلي والنهاري" title="دارك/لايت">🌓</button>
+        <button class="icon-btn burger" id="menuToggle" aria-label="فتح/غلق القائمة">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- هيرو -->
+  <section class="hero" id="hero">
+    <div class="container hero-inner">
+      <h1 class="hero-title reveal"> كليــــــة الهندسه الزراعــــيــه</h1>
+      <!-- <h4 class="hero-title reveal">هندسة المستقبل تبدأ من الأرض</h4> -->
+      <p class="hero-subtitle reveal">نبني مهندسين يقودون الزراعة الذكية والمستدامة — علم، ابتكار، وتأثير.</p>
+      <div class="hero-cta reveal">
+        <a class="btn primary" href="#programs">البرامج الدراسية</a>
+        <a class="btn ghost" href="#admissions">التقديم والقبول</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- عن الكلية -->
+  <section class="section" id="about">
+    <div class="container">
+      <header class="section-head reveal">
+        <div class="eyebrow">عن الكلية</div>
+        <h2>نصنع مهندسي الغد بروح الزراعة وعلومها</h2>
+        <p class="muted">حلقة الوصل بين العلوم الهندسية والأنظمة الزراعية الحديثة في بيئة تعليمية وبحثية متطورة.</p>
+      </header>
+      <div class="features">
+        <article class="card reveal">
+          <div class="icon">🧪</div>
+          <h3>معامل متقدمة</h3>
+          <p>تجهيزات تحليل وقياس تدعم البحث والتطوير.</p>
+        </article>
+        <article class="card reveal">
+          <div class="icon">🌱</div>
+          <h3>مشروعات حقلية</h3>
+          <p>تطبيق عملي داخل المزارع والمحطات البحثية.</p>
+        </article>
+        <article class="card reveal">
+          <div class="icon">📚</div>
+          <h3>مكتبة رقمية</h3>
+          <p>مصادر علمية محكّمة متاحة على مدار الساعة.</p>
+        </article>
+        <article class="card reveal">
+          <div class="icon">🤝</div>
+          <h3>شراكات صناعية</h3>
+          <p>ربط الطلاب بسوق العمل والشركات الرائدة.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- البرامج -->
+  <section class="section alt" id="programs">
+    <div class="container">
+      <header class="section-head reveal">
+        <div class="eyebrow">البرامج</div>
+        <h2>خطط دراسية متوازنة بين العلم والتطبيق</h2>
+      </header>
+      <div class="grid-3">
+        <article class="card reveal">
+          <h3>هندسة نظم الري الذكي</h3>
+          <p>تحكم آلي، حساسات، وتحليل بيانات للمياه.</p>
+        </article>
+        <article class="card reveal">
+          <h3>اهندسة  التصنيع</h3>
+          <p>عمليات، جودة، وسلامة الغذاء.</p>
+        </article>
+        <article class="card reveal">
+      <h3>  هندســـة القــوي والالات </h3>
+          <p>تصميم وصيانة الآلات والمعدات الزراعية.</p>
+        </article>
+        <article class="card reveal">
+            <h3> هندســـــة المنشئـــات والتـــحكم البيـــئي</h3>
+            <p> قسم المنشئـــات يشكل اهم الـقسام التي تعتبر محرك للزراعه </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- الأقسام -->
+  <section class="section" id="departments">
+    <div class="container">
+      <header class="section-head reveal">
+        <div class="eyebrow">الأقسام</div>
+        <h2>هيكلة علمية تدعم التخصص</h2>
+      </header>
+      <ul class="tags reveal">
+        <li>الري والصرف</li>
+        <li>الطاقة الحيوية</li>
+        <li>التصنيع الغذائي</li>
+        <li>الآلات الزراعية</li>
+        <li>هندسة التربة</li>
+        <li>تحكم ومعلوماتية</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- هيئة التدريس
+  <section class="section alt" id="faculty">
+    <div class="container">
+      <header class="section-head reveal">
+        <div class="eyebrow">هيئة التدريس</div>
+        <h2>خبراء أكاديميون وممارسون</h2>
+      </header>
+      <div class="grid-4">
+        <article class="person card reveal">
+          <div class="avatar" aria-hidden></div>
+          
+          <h3>د. أحمد علي</h3>
+          <p class="muted">أستاذ هندسة الري</p>
+        </article>
+        <article class="person card reveal">
+          <div class="avatar" aria-hidden></div>
+          <h3>د. منى عبدالسلام</h3>
+          <p class="muted">أستاذة تصنيع غذائي</p>
+        </article>
+        <article class="person card reveal">
+          <div class="avatar" aria-hidden></div>
+          <h3>د. يوسف حمدي</h3>
+          <p class="muted">أستاذ آلات ومعدات</p>
+        </article>
+        <article class="person card reveal">
+          <div class="avatar" aria-hidden></div>
+          <h3>د. سارة شريف</h3>
+          <p class="muted">أستاذة طاقة حيوية</p>
+        </article>
+      </div>
+    </div>
+  </section> -->
+
+
+
+<section class="protofolio" id="هيئة-التدريس">
+  <h2>هيئة التدريس</h2>
+  <div class="conteiner">
+    <div class="card">
+      <div class="card-img" style="background-image:url(img/badr.jpg)"></div>
+      <h3>د/ سمير حافظ</h3>
+      <p>عميد كلية الهندسة الزراعية</p>
+    </div>
+
+    <div class="card">
+      <div class="card-img" style="background-image:url(img/hema.jpg)"></div>
+      <h3>د/ محمد شتيوي</h3>
+      <p>وكيل الكلية</p>
+    </div>
+
+    <div class="card">
+      <div class="card-img" style="background-image:url(img/roby.jpg)"></div>
+      <h3>د/ رأفت الروابي</h3>
+      <p>وكيل الدراسات العليا</p>
+    </div>
+
+    <div class="card">
+      <div class="card-img" style="background-image:url(img/salaha.jpg)"></div>
+      <h3>د/ محمد بدر</h3>
+      <p>رئيس قسم التصنيع الزراعي</p>
+    </div>
+  </div>
+</section>
+
+
+
+ <!-- المقررات الدراسية -->
+<section class="section" id="courses">
+  <div class="container">
+    <header class="section-head reveal">
+      <div class="eyebrow">المقررات الدراسية</div>
+      <h2>المواد على حسب الفرق</h2>
+    </header>
+
+    <div class="grid-2 courses-grid">
+      
+      <!-- الفرقة الأولى -->
+      <article class="year-card card reveal">
+        <h3>الفرقة الأولى</h3>
+        <ul>
+          <li> <a href="PDF/first tirm/spen.html">الترم الأول</a></li>
+          <br>
+        <li> <a href="PDF/first tirm/conc.html">الترم الثـاني</a></li>
+        </ul>
+      </article>
+
+      <!-- الفرقة الثانية -->
+      <article class="year-card card reveal">
+        <h3>الفرقة الثانية</h3>
+        <ul>
+          <li> التـــرم الأول </li>
+          <br>
+          <li>التـــــرم  الثاني  </li>
+          
+        </ul>
+      </article>
+
+      <!-- الفرقة الثالثة -->
+      <article class="year-card card reveal">
+        <h3>الفرقة الثالثة</h3>
+        <ul>
+          <li>  الات </li>
+          <li>تصنيع  </li>
+          <li> ري </li>
+          <li> منشــــئات</li>
+         
+        </ul>
+      </article>
+
+      <!-- الفرقة الرابعة -->
+      <article class="year-card card reveal">
+        <h3>الفرقة الرابعة</h3>
+        <ul>
+    <li><a href="faculty.html">  الات </a></li>
+  <li><a href="PDF/first tirm/"> ري</a></li>
+  <li><a href="page3.html"> تصنيع </a></li>
+  <li><a href="page3.html"> منشــــئات </a></li>
+        </ul>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+</section>
+
+  <!-- التقديم والقبول -->
+  <section class="section" id="admissions">
+    <div class="container">
+      <header class="section-head reveal">
+        <div class="eyebrow">التقديم والقبول</div>
+        <h2>خطوات واضحة ومواعيد محددة</h2>
+      </header>
+      <ol class="steps reveal">
+        <li><span class="num">1</span> إنشاء حساب على بوابة الجامعة</li>
+        <li><span class="num">2</span> رفع المستندات المطلوبة</li>
+        <li><span class="num">3</span> سداد الرسوم إلكترونيًا</li>
+        <li><span class="num">4</span> متابعة نتيجة القبول</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- الأخبار -->
+  <section class="section alt" id="news">
+    <div class="container">
+      <header class="section-head reveal">
+        <div class="eyebrow">الأخبار والفعاليات</div>
+        <h2>كل جديد داخل الكلية</h2>
+      </header>
+      <div class="grid-3">
+        <article class="card reveal">
+          <h3>ورشة الزراعة الدقيقة</h3>
+          <p>تدريب عملي على حساسات الرطوبة ومراقبة الحقول.</p>
+          <a href=""> اضغط هنا </a>
+        </article>
+        <article class="card reveal">
+          <h3>مسابقة الابتكار الأخضر</h3>
+          <p>مشروعات طلابية مستدامة بالتعاون مع الصناعة.</p>
+        </article>
+        <article class="card reveal">
+          <h3>يوم التوظيف</h3>
+          <p>شركات ومزارع كبرى في الحرم الجامعي.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- تواصل -->
+  <section class="section" id="contact">
+    <div class="container">
+      <header class="section-head reveal">
+        <div class="eyebrow">تواصل معنا</div>
+        <h2>نسعد بالإجابة على استفساراتكم</h2>
+      </header>
+      <div class="contact-grid">
+        <div class="contact-item card reveal">
+          <div class="icon">📍</div>
+          <div>
+            <div class="label">العنوان</div>
+            <div class="muted">  مديـــنة نصـــر - القـــاهره - الحي السابع </div>
+          </div>
+        </div>
+        <div class="contact-item card reveal">
+          <div class="icon">📞</div>
+          <div>
+            <div class="label">الهاتف</div>
+            <div class="muted">+20 1155403132</div>
+          </div>
+        </div>
+        <div class="contact-item card reveal">
+          <div class="icon">✉️</div>
+          <div>
+            <div class="label">البريد</div>
+            <div class="muted">agri-eng@university.Azu</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="left">© <span id="year"></span> كلية الهندسة الزراعية</div>
+      <div class="right">صُنع بحب بواسطة عــــمرو موســــي</div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
+
+
+<!-- ===============================
+  ملف CSS — styles.css
+================================== -->
+<style>
+:root {
+  --bg: #ffffff;
+  --text: #0f172a; /* slate-900 */
+  --muted: #64748b; /* slate-500 */
+  --card: #f8fafc; /* slate-50 */
+  --border: #e2e8f0; /* slate-200 */
+  --accent: #10b981; /* emerald-500 */
+  --accent-2: #a7f3d0; /* emerald-200 */
+  --shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+html[data-theme="dark"] {
+  --bg: #0b1220;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --card: #0f172a;
+  --border: #1f2937;
+  --accent: #34d399;
+  --accent-2: #064e3b;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Tajawal", "Cairo", system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Kufi Arabic", sans-serif;
+  line-height: 1.7;
+}
+
+.container { width: min(1100px, 92%); margin-inline: auto; }
+.muted { color: var(--muted); }
+.btn { display: inline-flex; align-items: center; gap: .5rem; padding: .8rem 1.1rem; border-radius: 16px; border: 1px solid var(--border); text-decoration: none; font-weight: 700; box-shadow: var(--shadow); }
+.btn.primary { background: var(--accent); color: #fff; border-color: transparent; }
+.btn.ghost { background: transparent; color: var(--text); }
+.btn:hover { transform: translateY(-1px); }
+
+/* Header */
+.site-header { position: sticky; top: 0; z-index: 50; backdrop-filter: blur(8px); background: color-mix(in oklab, var(--bg) 70%, transparent); border-bottom: 1px solid var(--border); }
+.header-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+.brand { display: flex; align-items: center; gap: .6rem; text-decoration: none; color: inherit; }
+.brand-icon { display: grid; place-items: center; width: 36px; height: 36px; background: var(--accent); color: #fff; border-radius: 12px; box-shadow: var(--shadow); }
+.brand-text .muted { font-size: .85rem; }
+.brand-text .strong { display: block; font-weight: 900; letter-spacing: .2px; }
+
+.nav { display: none; gap: .25rem; }
+.nav-link { padding: .5rem .9rem; border-radius: 12px; text-decoration: none; color: var(--text); border: 1px solid transparent; }
+.nav-link:hover { border-color: var(--border); background: var(--card); }
+
+.header-actions { display: flex; align-items: center; gap: .5rem; }
+.icon-btn { width: 40px; height: 40px; display: grid; place-items: center; border-radius: 12px; border: 1px solid var(--border); background: var(--card); cursor: pointer; box-shadow: var(--shadow); }
+.burger { display: grid; }
+
+@media (min-width: 900px) {
+  .nav { display: flex; }
+  .burger { display: none; }
+}
+
+/* Hero */
+.hero { position: relative; padding: 72px 0 48px; }
+.hero-title { font-size: clamp(1.8rem, 3vw, 3rem); margin: 0 0 .6rem; font-weight: 900; letter-spacing: .2px; }
+.hero-subtitle { font-size: clamp(1rem, 2vw, 1.25rem); margin: 0 0 1rem; color: var(--muted); }
+.hero-cta { display: flex; gap: .6rem; flex-wrap: wrap; }
+
+/* Sections */
+.section { padding: 60px 0; }
+.section.alt { background: color-mix(in oklab, var(--card) 86%, var(--bg)); }
+.section-head .eyebrow { color: #0ea5e9; font-weight: 800; letter-spacing: .4px; }
+.section-head h2 { margin: .2rem 0 .35rem; font-size: clamp(1.4rem, 2.6vw, 2rem); }
+
+/* Cards & grids */
+.features, .grid-3, .grid-4 { display: grid; gap: 14px; }
+.features { grid-template-columns: repeat(2, 1fr); }
+.grid-3 { grid-template-columns: repeat(1, 1fr); }
+.grid-4 { grid-template-columns: repeat(2, 1fr); }
+@media (min-width: 700px) {
+  .grid-3 { grid-template-columns: repeat(3, 1fr); }
+  .grid-4 { grid-template-columns: repeat(4, 1fr); }
+}
+@media (max-width: 520px) {
+  .features { grid-template-columns: 1fr; }
+}
+
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 16px; box-shadow: var(--shadow); }
+.card .icon { width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center; background: color-mix(in oklab, var(--accent-2) 60%, var(--bg)); }
+
+.tags { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; padding: 0; margin: 0; }
+.tags li { border: 1px solid var(--border); background: var(--card); padding: 8px 12px; border-radius: 999px; box-shadow: var(--shadow); }
+
+.person .avatar { aspect-ratio: 16 / 9; border-radius: 14px; background: linear-gradient(135deg, var(--accent-2), transparent); border: 1px solid var(--border); }
+
+.steps { display: grid; grid-template-columns: repeat(1, 1fr); gap: 12px; counter-reset: step; list-style: none; padding: 0; }
+.steps .num { display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 10px; background: var(--accent); color: #fff; margin-inline-start: 8px; font-weight: 800; }
+@media (min-width: 700px) { .steps { grid-template-columns: repeat(4, 1fr); } }
+
+.contact-grid { display: grid; gap: 12px; grid-template-columns: repeat(1, 1fr); }
+.contact-item { display: flex; gap: 10px; align-items: flex-start; }
+.contact-item .icon { width: 36px; height: 36px; border-radius: 10px; display: grid; place-items: center; background: var(--card); border: 1px solid var(--border); }
+.contact-item .label { font-weight: 800; }
+@media (min-width: 700px) { .contact-grid { grid-template-columns: repeat(3, 1fr); } }
+
+/* Footer */
+.site-footer { border-top: 1px solid var(--border); background: color-mix(in oklab, var(--bg) 85%, transparent); }
+.footer-inner { display: flex; align-items: center; justify-content: space-between; padding: 20px 0; color: var(--muted); font-size: .95rem; }
+
+/* Background animated shapes */
+.bg-shape { position: fixed; inset: auto; pointer-events: none; z-index: -1; filter: blur(60px); opacity: .35; }
+.bg-1 { top: -60px; left: 10%; width: 260px; height: 260px; background: radial-gradient(circle at 30% 30%, var(--accent) 0%, transparent 60%); animation: float1 12s infinite ease-in-out; }
+.bg-2 { bottom: -80px; right: 8%; width: 320px; height: 320px; background: radial-gradient(circle at 70% 70%, var(--accent-2) 0%, transparent 60%); animation: float2 14s infinite ease-in-out; }
+@keyframes float1 { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(24px); } }
+@keyframes float2 { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-28px); } }
+
+/* Reveal on scroll */
+.reveal { opacity: 0; transform: translateY(12px); transition: .6s ease; }
+.reveal.show { opacity: 1; transform: translateY(0); }
+</style>
+
+
+<!-- ===============================
+  ملف JavaScript — script.js
+================================== -->
+<script>
+(function(){
+  const root = document.documentElement; // <html>
+  const yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  // تفضيل النظام
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const savedTheme = localStorage.getItem('theme');
+  const initial = savedTheme || (prefersDark ? 'dark' : 'light');
+  root.setAttribute('data-theme', initial);
+
+  // تبديل الثيم
+  const themeBtn = document.getElementById('themeToggle');
+  if (themeBtn) {
+    themeBtn.addEventListener('click', () => {
+      const current = root.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    });
+  }
+
+  // قائمة الموبايل
+  const menuBtn = document.getElementById('menuToggle');
+  const nav = document.getElementById('mainNav');
+  if (menuBtn && nav) {
+    menuBtn.addEventListener('click', () => {
+      nav.classList.toggle('open');
+      if (nav.classList.contains('open')) {
+        nav.style.display = 'flex';
+        nav.style.flexDirection = 'column';
+        nav.style.position = 'absolute';
+        nav.style.top = '64px';
+        nav.style.right = '4%';
+        nav.style.background = getComputedStyle(document.body).getPropertyValue('--bg');
+        nav.style.border = '1px solid var(--border)';
+        nav.style.borderRadius = '16px';
+        nav.style.padding = '8px';
+        nav.style.boxShadow = 'var(--shadow)';
+        nav.querySelectorAll('a').forEach(a=>{ a.style.padding = '.6rem .9rem'; a.style.display='block'; });
+      } else {
+        nav.removeAttribute('style');
+        nav.querySelectorAll('a').forEach(a=>{ a.removeAttribute('style'); });
+      }
+    });
+  }
+
+  // سكرول ناعم وتسكير القائمة بعد الاختيار
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      const id = link.getAttribute('href');
+      const el = document.querySelector(id);
+      if (el) {
+        e.preventDefault();
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        if (nav) { nav.classList.remove('open'); nav.removeAttribute('style'); nav.querySelectorAll('a').forEach(a=>a.removeAttribute('style')); }
+      }
+    });
+  });
+
+  // Reveal on scroll باستخدام IntersectionObserver
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) entry.target.classList.add('show');
+    });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+})();
+</script>
