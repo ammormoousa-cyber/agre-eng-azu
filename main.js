@@ -68,3 +68,100 @@ document.addEventListener("DOMContentLoaded", () => {
     card.style.animationDelay = `${index * 0.2}s`;
   });
 });
+
+
+
+
+
+
+// بيانات الطلاب
+const students = [
+  {
+    nationalCode: "1234@azhar",
+    id: "2023001",
+    name: "أحمد محمد",
+    subjects: {
+      "رياضيات": 90,
+      "لغة عربية": 85,
+      "لغة إنجليزية": 88,
+      "حاسب آلي": 92
+    }
+  },
+  {
+    nationalCode: "5678@azhar",
+    id: "2023002",
+    name: "منى علي",
+    subjects: {
+      "رياضيات": 70,
+      "لغة عربية": 75,
+      "لغة إنجليزية": 80,
+      "حاسب آلي": 60
+    }
+  }
+];
+
+// دالة عرض النتيجة
+function showResult() {
+  const studentCode = document.getElementById("studentCode").value.trim();
+  const resultBox = document.getElementById("resultBox");
+
+  const student = students.find(s => s.nationalCode === studentCode);
+
+  if (!student) {
+    resultBox.innerHTML = "<p style='color:red;'>⚠️ الطالب غير موجود!</p>";
+    return;
+  }
+
+  resultBox.innerHTML = `
+    <div class="card">
+      <h2>${student.name}</h2>
+      <h4>الرقم الجامعي: ${student.id}</h4>
+      <ul class="result-list">
+        ${Object.entries(student.subjects).map(([sub, mark]) => 
+          `<li><strong>${sub}</strong>: ${mark}</li>`
+        ).join("")}
+      </ul>
+      <button onclick="editResult('${student.nationalCode}')">✏️ تعديل النتيجة</button>
+    </div>
+  `;
+}
+
+// دالة تعديل النتيجة
+function editResult(code) {
+  const student = students.find(s => s.nationalCode === code);
+  const resultBox = document.getElementById("resultBox");
+
+  resultBox.innerHTML = `
+    <div class="card">
+      <h2>تعديل نتيجة: ${student.name}</h2>
+      ${Object.entries(student.subjects).map(([sub, mark]) => `
+        <label>${sub}: 
+          <input type="number" id="${sub}" value="${mark}" min="0" max="100">
+        </label>
+      `).join("")}
+      <button onclick="saveResult('${code}')">💾 حفظ التعديلات</button>
+    </div>
+  `;
+}
+
+// دالة حفظ النتيجة
+function saveResult(code) {
+  const student = students.find(s => s.nationalCode === code);
+  
+  for (let sub in student.subjects) {
+    const newMark = document.getElementById(sub).value;
+    student.subjects[sub] = parseInt(newMark);
+  }
+
+  alert("✅ تم حفظ التعديلات!");
+  showResult(); // إعادة عرض النتيجة
+}
+
+
+
+ 
+
+
+
+
+
